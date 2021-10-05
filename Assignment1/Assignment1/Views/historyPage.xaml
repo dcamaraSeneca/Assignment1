@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Assignment1.Views.historyPage"
+             Title="History Items">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="histy" ItemSelected="hist_ItemSelected" RowHeight="60" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" HeightRequest="300" BackgroundColor="LightGray" Margin="0,3,0,0" Padding="10,0,10,0">
+                                <StackLayout Orientation="Vertical" BackgroundColor="LightGray" >
+                                    <Label Text="{Binding name}" TextColor="Black"></Label>
+                                    <Label Text="{Binding quantity}"  TextColor="Black"  ></Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

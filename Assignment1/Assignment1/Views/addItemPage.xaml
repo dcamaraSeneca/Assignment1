@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Assignment1.Views.addItemPage"
+             Title="Add New Product">
+    <!--<ContentPage.Content>-->
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary" Priority="0" Text="Save" Clicked="save_Clicked"></ToolbarItem>
+        <ToolbarItem Order="Primary" Priority="1" Text="Cancel" Clicked="cancel_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+        <TableView Margin="5,20,5,20" >
+            <TableRoot>
+            <TableSection Title="NEW PRODUCT" TextColor="Black" >
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="10,0,10,0">
+                        <Label Text="Product Name" VerticalOptions="Center" FontSize="Medium" FontAttributes="Bold" WidthRequest="120"/>
+                        <Entry x:Name="nm" Placeholder="Enter Product Name"  HorizontalOptions="StartAndExpand"/>
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="10,0,10,0">
+                        <Label Text="Price" VerticalOptions="Center" FontSize="Medium" FontAttributes="Bold" WidthRequest="120"/>
+                        <Entry x:Name="pr" Placeholder="Enter Product Price" Keyboard="Numeric" HorizontalOptions="StartAndExpand"/>
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="10,0,10,0">
+                        <Label Text="Quantity" VerticalOptions="Center"  FontSize="Medium" FontAttributes="Bold" WidthRequest="120"/>
+                        <Entry x:Name="qt" Placeholder="Enter Product Quantity" Keyboard="Numeric" HorizontalOptions="StartAndExpand"/>
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+            </TableRoot>
+        </TableView>
+    <!--</ContentPage.Content>-->
+</ContentPage>

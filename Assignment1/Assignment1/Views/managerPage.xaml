@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Assignment1.Views.managerPage">
+    
+        <!--<ContentPage.Content>-->
+        <RelativeLayout>
+            <StackLayout Orientation="Vertical" 
+                         RelativeLayout.HeightConstraint="{ConstraintExpression
+                            Type=RelativeToParent, Property=Height, Factor=1}"
+                         RelativeLayout.WidthConstraint="{ConstraintExpression
+                            Type=RelativeToParent, Property=Width, Factor=1}"
+                         VerticalOptions="CenterAndExpand">
+
+            <Button Text="History"  HorizontalOptions="Center" BackgroundColor="HotPink" TextColor="Blue" WidthRequest="170" Clicked="History_Clicked"/>
+            <Button Text="Restock" HorizontalOptions="Center"  BackgroundColor="HotPink" TextColor="Blue" WidthRequest="170" Clicked="Restock_Clicked"/>
+            <Button Text="Add New Product" HorizontalOptions="Center" BackgroundColor="HotPink" TextColor="Blue" WidthRequest="170" Clicked="AddItem_Clicked"/>
+        </StackLayout>
+        </RelativeLayout>
+    <!--</ContentPage.Content>-->
+    
+</ContentPage>

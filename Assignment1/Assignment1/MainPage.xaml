@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Assignment1.MainPage"
+             Title="Cash Register App">
+
+    <StackLayout Margin="15,10,15,20">
+        <!--<Label Text="Cash Register App" TextColor="Black" HorizontalOptions="Center"></Label>-->
+        <Grid Margin="0,30,0,0" RowDefinitions="auto, auto, auto, auto">
+            <Label x:Name ="productName" FontSize="Large" TextColor="Black" FontAttributes="Bold" Margin="0,10,15,20" Grid.Row="0" Grid.Column="0"></Label>
+            <Button Grid.Row="0" Grid.Column="1" BorderRadius="40" TextColor="Blue" BackgroundColor="Red" FontSize="Large" TextTransform="None" Text="Manager" Clicked="Manager_Clicked"></Button>
+        </Grid>
+        <!--Number Pad-->
+        <Grid RowDefinitions="auto, auto, auto, auto" >
+            <Button Grid.Row="0" Grid.Column="0" BorderRadius="40" TextColor="Black" FontSize="Large" Text="1" Clicked="Button_Clicked"></Button>
+            <Button Grid.Row="0" Grid.Column="1" BorderRadius="40" TextColor="Black" FontSize="Large" Text="2" Clicked="Button_Clicked"></Button>
+            <Button Grid.Row="0" Grid.Column="2" BorderRadius="40" TextColor="Black" FontSize="Large" Text="3" Clicked="Button_Clicked"></Button>
+            <Label Text="Total" x:Name="total" Grid.Row="0" Grid.Column="3"  FontSize="Large" TextColor="Black" FontAttributes="Bold"></Label>
+
+            <Button Grid.Row="1" Grid.Column="0" BorderRadius="40" TextColor="Black" FontSize="Large" Text="4" Clicked="Button_Clicked"></Button>
+            <Button Grid.Row="1" Grid.Column="1" BorderRadius="40" TextColor="Black" FontSize="Large" Text="5" Clicked="Button_Clicked"></Button>
+            <Button Grid.Row="1" Grid.Column="2" BorderRadius="40" TextColor="Black" FontSize="Large" Text="6" Clicked="Button_Clicked"></Button>
+            <Button Grid.Row="1" Grid.Column="3" BorderRadius="40"  BackgroundColor="Blue" FontSize="Large" TextColor="Black" FontAttributes="Bold" Grid.RowSpan="2" Text="Buy" TextTransform="None" Clicked="Buy_Clicked"></Button>
+
+            <Button Grid.Row="2" Grid.Column="0" BorderRadius="40" TextColor="Black" FontSize="Large" Text="7" Clicked="Button_Clicked"></Button>
+            <Button Grid.Row="2" Grid.Column="1" BorderRadius="40" TextColor="Black" FontSize="Large" Text="8" Clicked="Button_Clicked"></Button>
+            <Button Grid.Row="2" Grid.Column="2" BorderRadius="40" TextColor="Black" FontSize="Large" Text="9" Clicked="Button_Clicked"></Button>
+
+            <Button Grid.Row="3" Grid.Column="1" BorderRadius="40" TextColor="Black" FontSize="Large" Text="0" Clicked="Button_Clicked"></Button>
+        </Grid>
+        <Label Text="Quantity" x:Name="quantity" FontSize="Large" TextColor="Black" FontAttributes="Bold" Margin="0,10,0,20" ></Label>
+        
+        
+        <!--Inventory-->
+        <ListView x:Name="inventory" ItemSelected="inventory_ItemSelected" RowHeight="60" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>  
+                        <StackLayout Orientation="Vertical" HeightRequest="300" BackgroundColor="LightGray" Margin="0,3,0,0" Padding="10,0,10,0">  
+                            <StackLayout Orientation="Horizontal" BackgroundColor="LightGray" >
+                                <Label Text="{Binding name}" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                                <Label Text="{Binding quantity}"  TextColor="Black" HorizontalTextAlignment="End" ></Label>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" BackgroundColor="LightGray">
+                                <Label Text="{Binding price}"  TextColor="Red"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+                
+            </ListView.ItemTemplate>    
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

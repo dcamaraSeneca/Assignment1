@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Assignment1.Views.histDetails"
+             x:Name="title">
+    <!--<ContentPage.Content>-->
+        <RelativeLayout>
+            <StackLayout Orientation="Vertical" 
+                         RelativeLayout.HeightConstraint="{ConstraintExpression
+                            Type=RelativeToParent, Property=Height, Factor=1}"
+                         RelativeLayout.WidthConstraint="{ConstraintExpression
+                            Type=RelativeToParent, Property=Width, Factor=1}"
+                         VerticalOptions="CenterAndExpand"
+                         HorizontalOptions="Center">
+                <Label x:Name="nm" FontAttributes="Bold"/>
+            <Label x:Name="qt" FontAttributes="Bold"/>
+            <Label x:Name="dt" FontAttributes="Bold"/>
+            <Label x:Name="ta" FontAttributes="Bold"/>
+            </StackLayout>
+        </RelativeLayout>
+    <!--</ContentPage.Content>-->
+</ContentPage>
